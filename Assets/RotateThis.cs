@@ -8,20 +8,14 @@ public class RotateThis : MonoBehaviour
 
     public bool hasRotatedOnce = true;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
 
         if(hasRotatedOnce == false)
         {
-            transform.Rotate(Vector3.up, rotatingSpeed * Time.deltaTime);
-            //transform.Rotate(0, 90, 0);
+           // transform.Rotate(Vector3.up, rotatingSpeed * Time.deltaTime);
+            transform.Rotate(0, 90, 0);
             hasRotatedOnce = true;
         }
     }
@@ -35,6 +29,9 @@ public class RotateThis : MonoBehaviour
                 //other.transform.Rotate(new Vector3(0, rotatingSpeed * Time.deltaTime, 0));
                //transform.Rotate(Vector3.up, rotatingSpeed * Time.deltaTime);
         }
+
+        
+        Debug.Log("RotateThis collided");
     }
 
     void OnCollisionExit(Collision other)

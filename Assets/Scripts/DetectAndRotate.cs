@@ -5,9 +5,7 @@ using UnityEngine;
 public class DetectAndRotate : MonoBehaviour
 {
 
-    public bool hasRotatedOnce = false;
-
-    public float rotatingSpeed = 10f;
+    public float rotatingSpeed = 50f;
     
     void Start()
     {
@@ -25,7 +23,7 @@ public class DetectAndRotate : MonoBehaviour
             transform.parent = other.transform;       
         }
 
-        Debug.Log("Rotated");
+        Debug.Log("DetectAndRotate collided");
     }
 
     void OnCollisionExit(Collision other) 
