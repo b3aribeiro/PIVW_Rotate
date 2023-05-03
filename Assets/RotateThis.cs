@@ -7,6 +7,7 @@ public class RotateThis : MonoBehaviour
     public float rotatingSpeed = 50f;
 
     public bool hasRotatedOnce = false;
+    public int hasRotatedXTimes = 0;
 
     public GameObject rotatedObject;
 
@@ -14,18 +15,19 @@ public class RotateThis : MonoBehaviour
     void Update()
     {
 
-        if(hasRotatedOnce == true)
+        if(hasRotatedOnce == true && hasRotatedXTimes == 0)
         {
            // transform.Rotate(Vector3.up, rotatingSpeed * Time.deltaTime);
-            transform.Rotate(0, 90, 0);
+            hasRotatedXTimes++;
             hasRotatedOnce = false;
-        Debug.Log("RotateThis STOPPED");
+            rotatedObject.transform.Rotate(0, 90, 0);
+            Debug.Log("RotateThis STOPPED");
         }
     }
 
     void OnTriggerEnter(Collider other) {
 
-        if(other.gameObject.tag == "Player")
+        if(other.gameObject.tag == "Player" && hasRotatedXTimes == 0)
         {
             hasRotatedOnce = true;
                 //other.transform = transform.parent;
