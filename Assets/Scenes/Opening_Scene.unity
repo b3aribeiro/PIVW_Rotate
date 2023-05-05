@@ -371,7 +371,7 @@ MonoBehaviour:
   trialNum: 0
   trialName: 
   trials:
-  - Opening_Scene
+  - Playground
   pattern: 0
 --- !u!4 &1206575980
 Transform:
