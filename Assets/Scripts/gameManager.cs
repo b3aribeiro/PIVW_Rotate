@@ -65,7 +65,7 @@ public class gameManager : MonoBehaviour
     void PositionTrack() {
         float pX = player.transform.position.x;
         float pZ = player.transform.position.z;
-        Debug.Log(pX);
+        //Debug.Log(pX);
         player_pos.Add("[" + pX.ToString() + "," + pZ.ToString() + "]");
     }
 
