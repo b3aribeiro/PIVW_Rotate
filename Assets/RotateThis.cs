@@ -17,18 +17,22 @@ public class RotateThis : MonoBehaviour
     void Update()
     {
 
-        if(hasRotatedOnce == true && hasRotatedXTimes == 0)
+        
+    }
+
+    void Rotateplt() {
+        if (hasRotatedOnce == true && hasRotatedXTimes == 0)
         {
-           // transform.Rotate(Vector3.up, rotatingSpeed * Time.deltaTime);
+            // transform.Rotate(Vector3.up, rotatingSpeed * Time.deltaTime);
             hasRotatedXTimes++;
             hasRotatedOnce = false;
             rotatedObject_A.transform.Rotate(0, 90, 0);
             Debug.Log("Has Rotated AREA A");
         }
 
-         if(hasCollectedObj == true && hasRotatedXTimes == 1)
+        if (hasCollectedObj == true && hasRotatedXTimes == 1)
         {
-           // transform.Rotate(Vector3.up, rotatingSpeed * Time.deltaTime);
+            // transform.Rotate(Vector3.up, rotatingSpeed * Time.deltaTime);
             hasRotatedXTimes++;
             hasRotatedOnce = false;
             rotatedObject_B.transform.Rotate(0, 90, 0);
@@ -47,5 +51,7 @@ public class RotateThis : MonoBehaviour
 
         Debug.Log("RotateThis ENTER TRIGGERED");
         }
+
+        Rotateplt();
     }
 }
