@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Reset_Rotation : MonoBehaviour
 {
+    public GameObject pointer;
+    public GameObject pointer2; 
     public RotateThis rotateScript;
-    public float test;
+    public GameObject key;
     void Start()
     {
         rotateScript = GameObject.Find("ROTATOR_BYTRIGGER").GetComponent<RotateThis>();
@@ -20,6 +22,9 @@ public class Reset_Rotation : MonoBehaviour
         {
             rotateScript.hasCollectedObj = true;
             Debug.Log("Reset ENTER TRIGGERED");
+            pointer.SetActive(false);
+            pointer2.SetActive(false);
+            key.SetActive(false);
         }
     }
 }

@@ -12,11 +12,14 @@ EditorBuildSettings:
     path: Assets/Scenes/Opening_Scene.unity
     guid: 9f60902a0e4364df7b7618e9990cebe4
   - enabled: 1
-    path: Assets/Scenes/Playground.unity
+    path: Assets/Scenes/AutoRotate.unity
     guid: 707acc8dffb72b144bb1ffbe1c965f3d
   - enabled: 1
     path: Assets/Scenes/interstitial.unity
     guid: 3922cd55a30584e3781370b6b1a0330c
+  - enabled: 1
+    path: Assets/Scenes/ending.unity
+    guid: 6f5b6edfe0830489b862535349e5915a
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 9e7be553448fa2546aea5752021cbcf7,
       type: 2}
