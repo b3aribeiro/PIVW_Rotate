@@ -35,6 +35,14 @@ public class StartGame : MonoBehaviour
             pattern = false;
         }
 
+        if (pattern)
+        {
+            trials[0] = "AutoRotate";
+        }
+        else {
+            trials[0] = "PressRotate";
+        }
+
         GlobalControl.Instance.pattern = pattern;
         
 

@@ -73,6 +73,7 @@ public class Rotator : MonoBehaviour
             rotateSoundA.Play();
             Debug.Log("Has Rotated AREA B");
             pointer.SetActive(false);
+            door2.SetActive(false);
         }
 
     }
