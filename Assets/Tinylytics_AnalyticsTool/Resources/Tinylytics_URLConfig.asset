@@ -11,8 +11,8 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ebc25b0c2142be1419842db66d325513, type: 3}
   m_Name: Tinylytics_URLConfig
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   logo: {fileID: 0}
   header: Test
-  text: 
+  text:
   deploymentID: AKfycbzu_zdY2A6dxlqOiWArtiICTLvlz5BTmzZnDJXdnXYhtrJB4qFGJDb5jq7vKDCDEbVq
