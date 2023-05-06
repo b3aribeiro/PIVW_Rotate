@@ -12,14 +12,10 @@ public class Reset_Rotation : MonoBehaviour
         Debug.Log(rotateScript.hasCollectedObj);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
-    private void OnTriggerEnter(Collider co)
+    void OnTriggerEnter(Collider co)
     {
+
         if (co.gameObject.tag == "Player")
         {
             rotateScript.hasCollectedObj = true;
