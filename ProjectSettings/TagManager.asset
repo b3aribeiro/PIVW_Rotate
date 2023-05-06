@@ -6,6 +6,7 @@ TagManager:
   tags:
   - CinemachineTarget
   - isBase
+  - isObj
   layers:
   - Default
   - TransparentFX
