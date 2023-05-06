@@ -17,6 +17,8 @@ public class Rotator : MonoBehaviour
 
     public GameObject door1;
     public GameObject door2;
+    private bool rotate1;
+    private bool rotate2;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,6 +37,17 @@ public class Rotator : MonoBehaviour
         }
         else {
             text.SetActive(false);
+        }
+        rotateAnimation();
+    }
+
+    void rotateAnimation() {
+        if (rotate1 == true) {
+            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, 90, 0), 0.05f);
+        }
+        if (rotate2 == true)
+        {
+            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, 180, 0), 0.05f);
         }
     }
 
@@ -56,6 +69,7 @@ public class Rotator : MonoBehaviour
 
     void RotatePlt() {
         if (rotated == false && rotateCount == 0) {
+            rotate1 = true;
             rotated = true;
             ++rotateCount;
             rotatedObject_A.transform.Rotate(0, 90, 0);
@@ -67,6 +81,8 @@ public class Rotator : MonoBehaviour
         }
 
         if (rotated == false && rotateCount == 1) {
+            rotate1 = false;
+            rotate2 = true;
             rotated = true;
             ++rotateCount;
             rotatedObject_B.transform.Rotate(0, 90, 0);
