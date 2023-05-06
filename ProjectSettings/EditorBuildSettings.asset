@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/AutoRotate.unity
     guid: 707acc8dffb72b144bb1ffbe1c965f3d
   - enabled: 1
+    path: Assets/Scenes/PressRotate.unity
+    guid: 76e674039eb39844cb154ed51e5fa2ca
+  - enabled: 1
     path: Assets/Scenes/interstitial.unity
     guid: 3922cd55a30584e3781370b6b1a0330c
   - enabled: 1

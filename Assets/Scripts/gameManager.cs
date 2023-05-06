@@ -13,6 +13,7 @@ public class gameManager : MonoBehaviour
     public static string initials_input;
     private static bool timerIsActive = true;
     public static float trialTimer = 0;
+    private Scene m_scene;
     private string sceneName;
     private float dist;
     private bool gameStatus;
@@ -21,8 +22,9 @@ public class gameManager : MonoBehaviour
     private List<string> player_pos = new List<string>();
     //variables for rotation
     public Trial_end endStatus;
+    public Trial_end2 endStatus2;
     private bool terminate;
-
+    //
 
 
 
@@ -35,6 +37,8 @@ public class gameManager : MonoBehaviour
         trials = GlobalControl.Instance.trials;
         initials_input = SaveInitials.name;
         terminate = false;
+        m_scene = SceneManager.GetActiveScene();
+        sceneName = m_scene.name;
     }
 
     private void OnLevelWasLoaded()
@@ -52,13 +56,23 @@ public class gameManager : MonoBehaviour
             trialTimer += Time.deltaTime;
         }
 
-        terminate = endStatus.endStatus;
+        switch (sceneName) {
+            case "AutoRotate":
+                print("CASE "+sceneName);
+                terminate = endStatus.endStatus;
+                break;
+            case "PressRotate":
+                print("CASE " + sceneName);
+                terminate = endStatus2.endStatus;
+                break;
+
+        }
+        //terminate = endStatus.endStatus;
         if (terminate) {
             ResetRound();
         }
-   
 
-        
+
     }
 
 

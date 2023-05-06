@@ -4011,7 +4011,8 @@ MonoBehaviour:
   trialName: 
   trials: []
   player: {fileID: 841884399}
-  endStatus: {fileID: 450942298}
+  endStatus: {fileID: 0}
+  endStatus2: {fileID: 450942298}
 --- !u!4 &381235090
 Transform:
   m_ObjectHideFlags: 0
@@ -4929,10 +4930,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 450942296}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b660dcbb89aa8ce458f3905febb1f6da, type: 3}
+  m_Script: {fileID: 11500000, guid: 2c335798bbab4404da4c1319e3621834, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  status: {fileID: 850078896}
+  status: {fileID: 8158179}
   endStatus: 0
 --- !u!65 &450942299
 BoxCollider:
@@ -6160,7 +6161,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 558805087}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89965a1535dc1c0458a7de85d29041ad, type: 3}
+  m_Script: {fileID: 11500000, guid: 48f4441e252ff4741a6270861b66e5ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   pointer: {fileID: 196174801}
@@ -6168,6 +6169,7 @@ MonoBehaviour:
   rotateScript: {fileID: 0}
   key: {fileID: 1100548817608568753}
   keySound: {fileID: 558805094}
+  door2: {fileID: 973377330}
 --- !u!54 &558805089
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -16315,6 +16317,8 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 'Press R to rotate
+
+    the preivous space
 
     and continue'
 --- !u!222 &1925857528
