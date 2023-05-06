@@ -6,10 +6,12 @@ public class RotateThis : MonoBehaviour
 {
     public float rotatingSpeed = 50f;
 
+    public bool hasCollectedObj = false;
     public bool hasRotatedOnce = false;
     public int hasRotatedXTimes = 0;
 
-    public GameObject rotatedObject;
+    public GameObject rotatedObject_A;
+    public GameObject rotatedObject_B;
 
     // Update is called once per frame
     void Update()
@@ -20,8 +22,17 @@ public class RotateThis : MonoBehaviour
            // transform.Rotate(Vector3.up, rotatingSpeed * Time.deltaTime);
             hasRotatedXTimes++;
             hasRotatedOnce = false;
-            rotatedObject.transform.Rotate(0, 90, 0);
-            Debug.Log("RotateThis STOPPED");
+            rotatedObject_A.transform.Rotate(0, 90, 0);
+            Debug.Log("Has Rotated AREA A");
+        }
+
+         if(hasCollectedObj == true && hasRotatedXTimes == 1)
+        {
+           // transform.Rotate(Vector3.up, rotatingSpeed * Time.deltaTime);
+            hasRotatedXTimes++;
+            hasRotatedOnce = false;
+            rotatedObject_B.transform.Rotate(0, 90, 0);
+            Debug.Log("Has Rotated AREA B");
         }
     }
 
@@ -34,7 +45,7 @@ public class RotateThis : MonoBehaviour
                 //other.transform.Rotate(new Vector3(0, rotatingSpeed * Time.deltaTime, 0));
                //transform.Rotate(Vector3.up, rotatingSpeed * Time.deltaTime);
 
-        Debug.Log("RotateThis TRIGGERED");
+        Debug.Log("RotateThis ENTER TRIGGERED");
         }
     }
 }
