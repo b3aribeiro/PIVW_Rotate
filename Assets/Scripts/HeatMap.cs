@@ -61,7 +61,7 @@ public class HeatMap : MonoBehaviour
             Vector3 position = new Vector3(x, 1f, z);
             Debug.Log("x:" + x + " z:" + z);
             Instantiate(heatObject, position, Quaternion.identity);
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(0.05f);
         }
     }
 }
